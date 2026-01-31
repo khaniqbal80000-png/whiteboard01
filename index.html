@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premium Whiteboard Studio</title>
+    <link rel="stylesheet" href="style.css"> 
+</head>
+<body>
+
+    <div id="controls-panel">
+
+        <div class="control-group">
+            <label for="toolSelector">टूल:</label>
+            <select id="toolSelector" class="compact-select">
+                <option value="pen" selected>🖊️ Pen</option>
+                <option value="highlighter">💡 Highlighter</option>
+                <option value="eraser">🧼 Eraser</option>
+                <option value="text">🔠 Text</option>
+            </select>
+        </div>
+
+        <div class="control-group">
+            <label for="shapeSelector">आकृति:</label>
+            <select id="shapeSelector" class="compact-select">
+                <option value="none" selected>कोई नहीं</option>
+                <option value="rect">☐ Rectangle</option>
+                <option value="circle">⚪ Circle</option>
+                <option value="line">― Line</option>
+                <option value="triangle">△ Triangle</option>
+                <option value="diamond">◇ Diamond</option>
+                <option value="star_5">⭐ 5-Point Star</option>
+                <option value="arrow_right">⇢ Arrow</option>
+                <option value="hexagon">⬢ Hexagon</option>
+                <option value="heart">❤️ Heart</option>
+                <option value="cloud">☁️ Cloud</option>
+                <option value="cross">➕ Cross</option>
+                <option value="rhombus">⬦ Rhombus</option>
+                <option value="pentagon">⬟ Pentagon</option>
+                <option value="octagon"> Octagon</option>
+                <option value="parallelogram"> Parallelogram</option>
+                <option value="trapezoid"> Trapezoid</option>
+                <option value="semi_circle"> Semi-Circle</option>
+                <option value="speech_bubble"> Speech Bubble</option>
+                <option value="cube"> Cube</option>
+                <option value="cylinder"> Cylinder</option>
+            </select>
+        </div>
+
+        <div class="control-group">
+            <label for="colorPicker" class="control-label">Colour:</label>
+            <input type="color" id="colorPicker" value="#000000" class="compact-input">
+
+            <label for="lineWidthSlider" class="control-label">Size:</label>
+            <input type="range" id="lineWidthSlider" min="1" max="50" value="5" class="compact-slider">
+            <span id="lineWidthDisplay" class="size-display">5 px</span>
+        </div>
+        
+        <div class="action-section">
+            <button id="undoBtn" class="action-btn">↩️ Undo</button>
+            <button id="redoBtn" class="action-btn">↪️ Redo</button>
+            <button id="clearBtn" class="action-btn">🗑️ Clear</button>
+            <button id="saveBtn" class="action-btn">💾 Save</button>
+        </div>
+
+    </div>
+    
+    <canvas id="whiteboard"></canvas>
+    <script src="script.js"></script> 
+</body>
+</html>
